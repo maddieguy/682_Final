@@ -20,9 +20,9 @@ Shot Spotter data: https://opendata.dc.gov/datasets/89bfd2aed9a142249225a638448a
 
 Election ward data: https://opendata.dc.gov/datasets/ward-from-2012
 
-![crime_per](crime_per.png)
+![crime_per](crime_per.jpeg)
 
-![ss_per](ss_per.png)
+![ss_per](ss_per.jpeg)
 
 <b>Automation</b>
 
