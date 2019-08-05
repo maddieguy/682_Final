@@ -31,7 +31,7 @@
 
 <table>
   <tr>
-    <th>Ward Name</th>
+    <th>Ward Number</th>
     <th>Number of gun crimes per 10,000 people</th> 
     <th>Number of Shot Spotter incidents per 10,000 people</th>
   </tr>
@@ -76,7 +76,10 @@
     <td>304</td>
   </tr>
 </table>
+<i>Table 1: Counts of gun crime and shot spotter incidents in D.C.'s election wards per 10,000 people</i>
 <i>Note: gun crime and Shot Spotter incident counts are rounded to the nearest whole number</i>
+
+<p>As seen in the </p>
 
 <b>Automation</b>
 
