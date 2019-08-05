@@ -23,11 +23,60 @@
 ![crime_per](crime_per.jpeg)
 <i>Figure 1: Number of gun crimes per 10,000 people in D.C.'s election wards</i>
 
-<p>Following a geospatial analysis that joined gun crime incidents and Shot Spotter incidents to each election ward, the count of gun crime incidents per ward was divided by the 2010 population divided by 10,000 to determine the number of gun crime incidents per 10,000 people, as shown in Figure 1. As seen in the figure, most of gun crime incidents occur in the southeast of D.C. (depicted by the darker colors in figure 1). </p>
+<p>Following a geospatial analysis that joined gun crime incidents and Shot Spotter incidents to each election ward, the count of gun crime incidents per ward was divided by the 2010 population divided by 10,000 to determine the number of gun crime incidents per 10,000 people, as shown in Figure 1. As seen in the figure, most of gun crime incidents occur in the southeast of D.C. (depicted by the darker colors in figure 1).</p>
 
 ![ss_per](ss_per.jpeg)
 <i>Figure 2: Number of Shot Spotter gun shots per 10,000 people in D.C.'s election wards</i>
-<p>Figure 2 displays number of Shot Spotter incidents per 10,000 people in each ward. The analysis to calculate the incidents was the same as the analysis used to determine gun crimes per 10,000 people, however, the Shot Spotter incident count was used instead of gun crime count.</p>
+<p>Figure 2 displays number of Shot Spotter incidents per 10,000 people in each ward. The analysis to calculate the incidents was the same as the analysis used to determine gun crimes per 10,000 people, however, the Shot Spotter incident count was used instead of gun crime count. Similar to the pattern seen in Figure 1, Shot Spotter incident reports are mostly focused in the southeast of the region, however, there is a noticeable disconnect between the number of gun crimes and Shot Spotter incidents in Ward 2 when comparing Figure 1 and Figure 2.</p>
+
+<table>
+  <tr>
+    <th>Ward Name</th>
+    <th>Number of gun crimes per 10,000 people</th> 
+    <th>Number of Shot Spotter incidents per 10,000 people</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>16</td> 
+    <td>18</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>8</td> 
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>3</td> 
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>18</td> 
+    <td>23</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>38</td> 
+    <td>60</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>23</td> 
+    <td>40</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>59</td> 
+    <td>238</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>61</td> 
+    <td>304</td>
+  </tr>
+</table>
+<i>Note: gun crime and Shot Spotter incident counts are rounded to the nearest whole number</i>
 
 <b>Automation</b>
 
