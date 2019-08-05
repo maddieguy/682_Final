@@ -21,19 +21,19 @@
 <p>Election ward data: https://opendata.dc.gov/datasets/ward-from-2012</p>
 
 ![crime_per](crime_per.jpeg)
-<i>Figure 1: Number of gun crimes per 10,000 people in D.C.'s election wards</i>
+<i>Figure 1: Number of gun crimes per 10,000 people in D.C.'s election wards in 2017</i>
 
 <p>Following a geospatial analysis that joined gun crime incidents and Shot Spotter incidents to each election ward, the count of gun crime incidents per ward was divided by the 2010 population divided by 10,000 to determine the number of gun crime incidents per 10,000 people, as shown in Figure 1. As seen in the figure, most of gun crime incidents occur in the southeast of D.C. (depicted by the darker colors in figure 1).</p>
 
 ![ss_per](ss_per.jpeg)
-<i>Figure 2: Number of Shot Spotter gun shots per 10,000 people in D.C.'s election wards</i>
+<i>Figure 2: Number of Shot Spotter gun shots per 10,000 people in D.C.'s election wards in 2017</i>
 <p>Figure 2 displays number of Shot Spotter incidents per 10,000 people in each ward. The analysis to calculate the incidents was the same as the analysis used to determine gun crimes per 10,000 people, however, the Shot Spotter incident count was used instead of gun crime count. Similar to the pattern seen in Figure 1, Shot Spotter incident reports are mostly focused in the southeast of the region, however, there is a noticeable disconnect between the number of gun crimes and Shot Spotter incidents in Ward 2 when comparing Figure 1 and Figure 2.</p>
 
 <table>
   <tr>
     <th>Ward Number</th>
-    <th>Number of gun crimes per 10,000 people</th> 
-    <th>Number of Shot Spotter incidents per 10,000 people</th>
+    <th>Number of gun crimes per 10,000 people in 2017</th> 
+    <th>Number of Shot Spotter incidents per 10,000 people in 2017</th>
   </tr>
   <tr>
     <td>1</td>
@@ -83,5 +83,13 @@
 <p>As seen in Table 1, election wards with very high gun crime numbers, such as wards 7 and 8 also report high Shot Spotter gun shot counts. Simialrly, wards with medium to low gun crime rates report medium to low Shot Spotter gun shot counts, respectively. However, ward 2 has a medium rate of gun crime, with almost no Shot Spotter gun shots recorded.</p>
 
 <b>Automation</b>
+
+<p>Python code written to automate this analysis was done in QGIS using QGIS processing tools. The first section of code automatically cleans the data by pulling out gun crimes from the crime incident shapefille and Shot Spotter incidents from 2017 from the full Shot Spotter dataset. 
+  
+```py
+
+```
+
+Following the cleaning of the data, spatial joins were performed to join counts of gun crimes and Shot Spotter incidents to the election ward polygons. </p>
 
 <b>Results</b>
