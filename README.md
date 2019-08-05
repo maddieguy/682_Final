@@ -84,12 +84,52 @@
 
 <b>Automation</b>
 
-<p>Python code written to automate this analysis was done in QGIS using QGIS processing tools. The first section of code automatically cleans the data by pulling out gun crimes from the crime incident shapefille and Shot Spotter incidents from 2017 from the full Shot Spotter dataset. 
+<p>Python code written to automate this analysis was done in QGIS using QGIS processing tools. The first section of code automatically cleans the data by pulling out gun crimes from the crime incident shapefille and Shot Spotter incidents from 2017 from the full Shot Spotter dataset.</p>
   
 ```py
+iface.addVectorLayer(crime,"crime","ogr")
+crimeLayer = processing.getObject(crime)
+expr = "METHOD = 'GUN'"
+selection = crimeLayer.getFeatures(QgsFeatureRequest().setFilterExpression(expr))
+crimeLayer.setSelectedFeatures([k.id() for k in selection]) 
 
+_writer = QgsVectorFileWriter.writeAsVectorFormat(crimeLayer, 'S:/682/Summer19/mguy1/final/Gun_Crime.shp', "utf-8", None, "ESRI Shapefile", onlySelected=True)
+gunCrime = "S:/682/Summer19/mguy1/final/Gun_Crime.shp"
+iface.addVectorLayer(gunCrime,"gunCrime","ogr")
 ```
 
-Following the cleaning of the data, spatial joins were performed to join counts of gun crimes and Shot Spotter incidents to the election ward polygons. </p>
+<p>Following the cleaning of the data, spatial joins were performed to join counts of gun crimes and Shot Spotter incidents to the election ward polygons.</p>
+
+```py
+processing.runalg("qgis:joinattributesbylocation",
+    {'TARGET':ward_gunCrime,'JOIN':ss17,'PREDICATE':u'contains','SUMMARY':1,'KEEP':1,'OUTPUT':"S:/682/Summer19/mguy1/final/ward_crime_ss.shp"})
+ward_crime_ss = "S:/682/Summer19/mguy1/final/ward_crime_ss.shp" 
+QgsMapLayerRegistry.instance().removeAllMapLayers()
+iface.addVectorLayer(ward_crime_ss,"ward_crime_ss","ogr")
+```
+
+<p>Finally, a for loop was created to display the counts of gun crimes and Shot Spotter incidents in each ward. This loop also calculated the 2010 population divided by 10,000, and divided the counts by that number.</p>
+
+```py
+for feature in features:
+    if feature["count_1"] == NULL:
+        print(feature["NAME"] + " had")
+        print(feature["count"]/(feature["POP_2010"]/10000))
+        print("gun crimes per 10,000 people in 2017, and 0 Shotspotter incidents in 2017.")
+        print(" ")
+    else:
+        print(feature["NAME"] + " had")
+        print(feature["count"]/(feature["POP_2010"]/10000))
+        print("gun crimes per 10,000 people in 2017, and")
+        print(feature["count_1"]/(feature["POP_2010"]/10000))
+        print( "Shot Spotter incidents per 10,000 people in 2017.")
+        print(" ")
+```
 
 <b>Results</b>
+
+<p>As described in the analysis documentation above, it is recommended that the Shot Spotter sensor network is expanded to include more sensors in Ward 2 due to the disconnect between the gun crimes and recorded Shot Spotter incidents.</p>
+
+<p>One limitation of this analysis is that the code is not fully automated to record statistics such as the counts per 10,000 people in shapefile as an attribute for each feature. Thus, to create any maps or figures using these statistics, they must be entered manually into the attribute table.</p>
+
+<p>Another limitation of this analysis is with the data used, specifically the gun crime data. While we know that crimes used in this analysis were gun crimes, we do not know how many shots were fired in each crime (or feature in the shapefile). Thus, there may be more or gun shots that are not captured by Shot Spotter sensors, but are also not captured in the gun crime data we are using.</p>
