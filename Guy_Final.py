@@ -70,7 +70,7 @@ for feature in features: #Loops through each feature (all 8 wards)
         print(" ")
     else: #The else statement is used when a count_1 value does NOT equal NULL
         print(feature["NAME"] + " had")
-        print(feature["count"]/(feature["POP_2010"]/10000)
+        print(feature["count"]/(feature["POP_2010"]/10000))
         print("gun crimes per 10,000 people in 2017, and")
         print(feature["count_1"]/(feature["POP_2010"]/10000)) #In addition to gun crimes per 10,000, this prints shot spotter incidents per 10,000 as well
         print( "Shot Spotter incidents per 10,000 people in 2017.")
