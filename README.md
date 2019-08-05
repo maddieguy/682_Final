@@ -77,9 +77,10 @@
   </tr>
 </table>
 <i>Table 1: Counts of gun crime and shot spotter incidents in D.C.'s election wards per 10,000 people</i>
+
 <i>Note: gun crime and Shot Spotter incident counts are rounded to the nearest whole number</i>
 
-<p>As seen in the </p>
+<p>As seen in Table 1, election wards with very high gun crime numbers, such as wards 7 and 8 also report high Shot Spotter gun shot counts. Simialrly, wards with medium to low gun crime rates report medium to low Shot Spotter gun shot counts, respectively. However, ward 2 has a medium rate of gun crime, with almost no Shot Spotter gun shots recorded.</p>
 
 <b>Automation</b>
 
