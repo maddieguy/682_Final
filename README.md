@@ -21,8 +21,10 @@ Shot Spotter data: https://opendata.dc.gov/datasets/89bfd2aed9a142249225a638448a
 Election ward data: https://opendata.dc.gov/datasets/ward-from-2012
 
 ![crime_per](crime_per.jpeg)
+<i>Figure 1: Number of gun crimes per 10,000 people in D.C.'s election wards</i>
 
 ![ss_per](ss_per.jpeg)
+<i>Figure 2: Number of Shot Spotter gun shots per 10,000 people in D.C.'s election wards</i>
 
 <b>Automation</b>
 
